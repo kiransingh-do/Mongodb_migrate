@@ -1,0 +1,28 @@
+<?php
+
+
+/**
+ * Implements hook_requirements().
+ */
+function custom_migrate_requirements($phase) {
+  $requirements = [];
+
+  // Check if the MongoDB extension is loaded.
+  if (!extension_loaded('mongodb')) {
+    $requirements['mongodb'] = [
+      'title' => t('MongoDB PHP extension'),
+      'value' => t('Not installed'),
+      'description' => t('The MongoDB PHP extension is required for this module to function properly.'),
+      'severity' => REQUIREMENT_ERROR,
+    ];
+  }
+  else {
+    $requirements['mongodb'] = [
+      'title' => t('MongoDB PHP extension'),
+      'value' => t('Installed'),
+      'severity' => REQUIREMENT_OK,
+    ];
+  }
+
+  return $requirements;
+}

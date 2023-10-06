@@ -1,0 +1,3 @@
+services:
+  my_entity.utils:
+    class: Drupal\my_entity\Service\Utils

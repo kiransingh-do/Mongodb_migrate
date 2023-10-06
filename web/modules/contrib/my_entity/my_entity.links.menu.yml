@@ -1,0 +1,18 @@
+entity.my_entity.collection:
+  title: 'My Entity items'
+  route_name: 'entity.my_entity.collection'
+  parent: 'system.admin_content'
+  description: 'Manage your my entity items.'
+  weight: 50
+
+entity.my_entity_type.collection:
+  title: 'My Entity types'
+  route_name: 'entity.my_entity_type.collection'
+  parent: 'system.admin_structure'
+  description: 'Manage fields, form and display settings for your my entity types.'
+  weight: 50
+
+my_entity.grouped_entity_links:
+  class: Drupal\my_entity\Plugin\Menu\GroupedEntityLinks
+  deriver: Drupal\my_entity\Plugin\Derivative\GroupedEntityLinksDeriver
+  menu_name: my_entity

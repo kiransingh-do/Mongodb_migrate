@@ -1,0 +1,3 @@
+services:
+  custom_entity_migrate.utils:
+    class: Drupal\custom_entity_migrate\Service\Utils

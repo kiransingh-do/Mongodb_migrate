@@ -1,0 +1,18 @@
+entity.custom_entity_migrate.collection:
+  title: 'My Entity items'
+  route_name: 'entity.custom_entity_migrate.collection'
+  parent: 'system.admin_content'
+  description: 'Manage your my entity items.'
+  weight: 50
+
+entity.custom_entity_migrate_type.collection:
+  title: 'My Entity types'
+  route_name: 'entity.custom_entity_migrate_type.collection'
+  parent: 'system.admin_structure'
+  description: 'Manage fields, form and display settings for your my entity types.'
+  weight: 50
+
+custom_entity_migrate.grouped_entity_links:
+  class: Drupal\custom_entity_migrate\Plugin\Menu\GroupedEntityLinks
+  deriver: Drupal\custom_entity_migrate\Plugin\Derivative\GroupedEntityLinksDeriver
+  menu_name: custom_entity_migrate

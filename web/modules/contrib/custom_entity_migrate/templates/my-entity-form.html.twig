@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for the custom_entity_migrate add/edit form.
+ *
+ * Available variables:
+ * - form: The form.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="layout-my-entity-form clearfix">
+  <div class="layout-region layout-region-my-entity-main">
+    {{ form|without('advanced', 'actions') }}
+  </div>
+  <div class="layout-region layout-region-my-entity-secondary">
+    {{ form.advanced }}
+  </div>
+  <div class="layout-region layout-region-my-entity-footer">
+    {{ form.actions }}
+  </div>
+</div>

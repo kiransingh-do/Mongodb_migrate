@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Defines the MyEntity entity and associated features.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function custom_entity_migrate_theme() {
+  return [
+    'custom_entity_migrate' => [
+      'render element' => 'elements',
+    ],
+    'custom_entity_migrate_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for custom_entity_migrate templates.
+ *
+ * Default template: my-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing rendered fields.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_custom_entity_migrate(array &$variables) {
+  /** @var Drupal\custom_entity_migrate\Entity\MyEntityInterface $custom_entity_migrate */
+  $custom_entity_migrate = $variables['elements']['#custom_entity_migrate'];
+
+  $variables['custom_entity_migrate_entity'] = $custom_entity_migrate;
+  $variables['custom_entity_migrate_url'] = $custom_entity_migrate->isNew() ? '' : $custom_entity_migrate->toUrl();
+  $variables['custom_entity_migrate'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['custom_entity_migrate'][$key] = $variables['elements'][$key];
+  }
+}

@@ -1,0 +1,4 @@
+'administer custom_entity_migrate_type':
+  title: 'Administer custom_entity_migrate types'
+  description: 'Maintain the types of my entity types available and the fields that are associated with those types.'
+  restrict access: true

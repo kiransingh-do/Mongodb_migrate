@@ -1,0 +1,10 @@
+entity.cities.settings:
+  title: 'cities'
+  description: 'Configure a cities entity type.'
+  route_name:  entity.cities.settings
+  parent: system.admin_structure
+entity.cities.collection:
+  title: 'citiess'
+  description: 'List of citiess.'
+  route_name: entity.cities.collection
+  parent: system.admin_content

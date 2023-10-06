@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ *
+ * Default template for my entity item.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - my_entity: The rendered my_entity fields.
+ *   Use 'my_entity' to print them all, or print a subset such as
+ *   'my_entity.name'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ my_entity|without('name') }}
+ *   @endcode
+ * - my_entity_entity: The my_entity entity.
+ * - my_entity_url: The my_entity URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  {{ my_entity }}
+</article>

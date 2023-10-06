@@ -1,0 +1,15 @@
+id: custom_migration
+migration_tags:
+  - mongodb
+migration_group: null
+label: 'Migrate data from the source mongodb'
+source:
+  plugin: mongodb_source # This should be your MongoDB source plugin
+destination:
+  plugin: 'entity:cities' # Replace this with your actual destination entity type
+process:
+  id: _id
+  label: city
+  state: state
+  pop: pop
+

@@ -1,0 +1,11 @@
+administer cities:
+  title: 'Administer cities settings'
+  restrict access: true
+delete cities:
+  title: Delete cities
+create cities:
+  title: Create cities
+view cities:
+  title: View cities
+edit cities:
+  title: Edit cities

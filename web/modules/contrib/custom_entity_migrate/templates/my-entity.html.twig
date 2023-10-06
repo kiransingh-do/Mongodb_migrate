@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ *
+ * Default template for my entity item.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - custom_entity_migrate: The rendered custom_entity_migrate fields.
+ *   Use 'custom_entity_migrate' to print them all, or print a subset such as
+ *   'custom_entity_migrate.name'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ custom_entity_migrate|without('name') }}
+ *   @endcode
+ * - custom_entity_migrate_entity: The custom_entity_migrate entity.
+ * - custom_entity_migrate_url: The custom_entity_migrate URL.
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  {{ custom_entity_migrate }}
+</article>

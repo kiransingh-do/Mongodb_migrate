@@ -1,0 +1,15 @@
+entity.cities.settings:
+  path: 'admin/structure/cities'
+  defaults:
+    _form: '\Drupal\custom_migrate\Form\CitiesSettingsForm'
+    _title: 'cities'
+  requirements:
+    _permission: 'administer cities'
+
+custom_migrate.configuration_form:
+  path: '/admin/config/migrate_form'
+  defaults:
+    _form: '\Drupal\custom_migrate\Form\MigrationConfigurationForm'
+    _title: 'Migration Configuration Mapping Form'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,11 @@
+entity.custom_entity_migrate.add_page:
+  route_name: entity.custom_entity_migrate.add_page
+  title: 'Add my entity item'
+  appears_on:
+    - entity.custom_entity_migrate.collection
+
+entity.custom_entity_migrate_type.add_form:
+  route_name: entity.custom_entity_migrate_type.add_form
+  title: 'Add my entity type'
+  appears_on:
+    - entity.custom_entity_migrate_type.collection

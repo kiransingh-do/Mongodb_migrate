@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Defines the MyEntity entity and associated features.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_theme().
+ */
+function my_entity_theme() {
+  return [
+    'my_entity' => [
+      'render element' => 'elements',
+    ],
+    'my_entity_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for my_entity templates.
+ *
+ * Default template: my-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing rendered fields.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_my_entity(array &$variables) {
+  /** @var Drupal\my_entity\Entity\MyEntityInterface $my_entity */
+  $my_entity = $variables['elements']['#my_entity'];
+
+  $variables['my_entity_entity'] = $my_entity;
+  $variables['my_entity_url'] = $my_entity->isNew() ? '' : $my_entity->toUrl();
+  $variables['my_entity'] = [];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['my_entity'][$key] = $variables['elements'][$key];
+  }
+}

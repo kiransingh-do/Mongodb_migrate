@@ -1,0 +1,13 @@
+name: My Entity
+type: module
+description: 'Defines the MyEntity entity and associated features.'
+package: Custom Entity Modules
+core_version_requirement: ^9.3 || ^10
+configure: entity.my_entity.collection
+dependencies:
+  - entity:entity
+
+# Information added by Drupal.org packaging script on 2023-09-20
+version: '1.0.0'
+project: 'my_entity'
+datestamp: 1695179399

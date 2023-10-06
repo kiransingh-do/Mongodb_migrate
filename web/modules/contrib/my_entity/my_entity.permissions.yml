@@ -1,0 +1,4 @@
+'administer my_entity_type':
+  title: 'Administer my_entity types'
+  description: 'Maintain the types of my entity types available and the fields that are associated with those types.'
+  restrict access: true
